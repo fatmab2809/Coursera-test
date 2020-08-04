@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coursera </title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
-    <h1>First Angular app</h1>
+    <h1>First Angular Calculator app</h1>
+    <!-- <div ng-controller="Controller">
+        {{calc()}}
+        <br>
+        <input type="text" ng-model="name">
+        Inside my input is: {{name}}
+    </div> -->
     <div ng-controller="Controller">
-        {{name}}
-        <!-- <input type="text" ng-model="name">
-        Inside my input is: {{name}} -->
+        <input type="text" ng-model="name" ng-keyUp="display();" ng-blur="upper();">
+        Total Numeric value: {{totalValue}}
     </div>
 </body>
 </html>
